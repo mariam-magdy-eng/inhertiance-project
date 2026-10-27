@@ -1,16 +1,12 @@
 class Person {
-  // Private attributes
   String _name;
   int _age;
 
-  // Constructor
   Person(this._name, this._age);
 
-  // Getters
   String get name => _name;
   int get age => _age;
 
-  // Setters
   set name(String name) => _name = name;
   set age(int age) {
     if (age > 0) {
@@ -20,28 +16,23 @@ class Person {
     }
   }
 
-  // Display function for Person info
   void displayInfo() {
     print('Name: $_name');
     print('Age: $_age');
   }
 }
 
-// 2. Derived Class (Student) inherits from Person
 class Student extends Person {
   // Additional private attributes
   String _studentId;
   double _grade;
 
-  // Constructor using 'super' to pass name and age to the base class
   Student(String name, int age, this._studentId, this._grade)
     : super(name, age);
 
-  // Getters
   String get studentId => _studentId;
   double get grade => _grade;
 
-  // Setters
   set studentId(String studentId) => _studentId = studentId;
   set grade(double grade) {
     if (grade >= 0 && grade <= 100) {
